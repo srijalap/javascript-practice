@@ -19,7 +19,7 @@
     console.log (a)
     console.log (c)
 
-    //Donot chaange code below this line
+    
 
     a = a + 1;
     b = b + 1;
@@ -111,5 +111,122 @@
     var myStr = "This is the first sentence.";
     myStr += "This is my second sentence.";
     console.log(myStr)
+
+    //concatenate strings together with variables
+
+     var myName = "Srijana";
+     var myStr = "My name is " + myName + " and I am well!";
+     console.log(myStr);
+
+     //Appending variables to strings
+
+     var anAdjective = "awsome!";
+     var ourStr = "freeCodeCamp is ";
+     ourStr += anAdjective;
+     console.log(ourStr);
+
+     //Find length of string
+     
+     var firstNameLength = 0;
+     var firstName = "Ada";
+     firstNameLength = firstName.length;
+     console.log(firstNameLength);
+
+     //Bracket notation to find the first character in the string
+
+     var firstLetterOfFirstName = "";
+     var firstName = "Srijana";
+     firstLetterOfFirstName = firstName[0];
+     console.log(firstLetterOfFirstName);
+
+     //string immutability
+
+     var myStr = "jello world";
+     myStr = "Hello World";
+     console.log(myStr);
+
+     //Bracket character to find nth character in string
+    
+     var secondLetterOfFirstName = "";
+     var firstName = "Srijana";
+     secondLetterOfFirstName = firstName[1];
+     console.log(secondLetterOfFirstName);
+
+     //Bracket notation to find last character in the string
+
+     var lastLetterOfFirstName = "";
+     var firstName = "Srijana";
+     lastLetterOfFirstName = firstName[firstName.length-1];
+     console.log(lastLetterOfFirstName);
+
+       //Bracket notation to find last character in the string
+
+       var thirdToLastLetterOfFirstName = "";
+     var firstName = "Prekshya";
+     thirdToLastLetterOfFirstName = firstName[firstName.length-3];
+     console.log(thirdToLastLetterOfFirstName);
+
+     //word blanks
+
+     function wordBlanks(myNoun, myAdjective, myVerb,myAdverb){
+         var result = "";
+         result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb ;
+
+         return result;
+     }
+    
+     console.log(wordBlanks("dog","big","ran","quickly"));
+     console.log(wordBlanks("bike","small","flew","slowly"));
+
+     function wordBlanksNext(article, myNoun, myAdjective, myVerb,myAdverb, place){
+         var result = "";
+         result += article + " " + myAdjective + " " + myNoun + " " + myVerb + " to the " + place + " " + myAdverb ;
+
+         return result;
+     }
+    
+     console.log(wordBlanksNext("A", "dog","big","ran","quickly", "store"));
+     console.log(wordBlanksNext("A","bike","small","flew","slowly", "house"));
+
+
+     // store multiple values with arrays(allows multiple piece of data in one place)
+
+     var ourArray = ["John", 23];
+     console.log(ourArray);
+
+     // Nested arrays
+     var ourArray = [["The universe",42],["Everything",101010]];
+     console.log(ourArray);
+
+     //Access  array data with indexes
+
+     var ourArray = [50,60,70] ; //here we have 3 elements and 0,1,2 index
+     var ourData = ourArray[0];// Here  0 index falls in 50
+     console.log(ourData);
+
+     //Modify array data with indexes
+
+     var ourArray = [28,99,55];
+     ourArray [1]= [45];//our array now equals to [28,45,55] because index 1 is 99 in this code later its is change to 45.
+     console.log(ourArray);
+
+     //Access multi-dimensional arrays with indexes
+
+     var myArray =[[1,2,3],[4,5,6],[7,8,9],[[10,11,12],13,14]];// here we have total 4 index [0,1,2,3,]
+     console.log(myArray[3]); // Here index 3 falls in (Outputs) [[10,11,12],13,14],
+     console.log(myArray[3][0]); // index 0 falls in (Outputs) [10,11,12]
+     console.log(myArray[3][0][2]); // index 2 falls in (Outputs) 12 
+
+     //Manipulate arrays with push
+
+     var ourArray = ["Stimpson","J","cat"];
+     ourArray.push(["happy", "joy"]); //ourArray now has (4) elements with length(4) which is ["Stimpson","J","cat",["happy", "joy"]]
+     console.log(ourArray);
+
+     var myArray = [["john",23], ["cat", 2]];
+     myArray.push(["dog",3]);
+     console.log(myArray);
+
+
 
   </script>

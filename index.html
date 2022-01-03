@@ -386,6 +386,174 @@
     console.log("Returned is ", returned);
     console.log("After: " + JSON.stringify(testArr));
 
+   
+    //Boolean Values
+    function welcomeToBooleans(){
+        return true;
+
+    }
+        //Or
+
+    function welcomeToBooleans(){
+        return true;
+    }
+
+
+    // Use conditional logic with if statement
+
+    function trueOrFalse(wasThatTrue) {
+        if (wasThatTrue) {
+            return "Yes, that was true";
+
+        }
+
+        return "No, that was false";
+
+    }
+   console.log(trueOrFalse(true));
+
+
+   //Comparison with the equality operator
+    
+   
+   function testEqual(val) {
+    if (val == 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+   }
+   console.log(testEqual(12)); //here val is 12 and given num is also 12 so both are equal and output is also equal
+
+   //or using string here in("12")
+
+   function testEqual(val) {
+    if (val == 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+   }
+   console.log(testEqual('12')); //here val is 12 which is string type and it is converted into num type by this two equal sign(==)thats how their output becomes equal.
+
+
+
+  //Comparison with the strict equality operator
+
+  function testStrict(val) {
+    if (val === 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+   }
+   console.log(testStrict('12')); //here output is not equal because here is not conversion of  string type to num type by this 3(===)signs.
+
+   //without string
+
+   function testStrict(val) {
+    if (val === 12) {
+        return "Equal";
+    }
+    return "Not Equal";
+   }
+   console.log(testStrict(12)); //here output is equal because val(12 is num not string) and next num 12 is also num
+
+   //practice comparing different values
+   function compareEquality(a, b) {
+    if (a == b) {
+        return "Equal";
+    }
+    return "Not Equal";
+   }
+   console.log(compareEquality(14, "14")); ///here a is (num14), num b("14") which is string type and it is converted into num type by this two equal sign(==)thats how their output becomes equal.
+
+
+   function compareEqualityStrict(a, b) {
+    if (a === b) {
+        return "Equal";
+    }
+    return "Not Equal";
+   }
+   console.log(compareEqualityStrict(10, "10")); //here output is not equal because val(10 is num not string) and next 10 is string
+
+ //Comparison with the Inequality operator
+
+ function testNotEqual(val) {
+    if (val != 99) {
+    return "Not Equal";
+ }
+    return "Equal";
+}
+console.log(testNotEqual(10)); //here output is not equal
+
+
+//Comparison with the strict Inequality operator
+
+function testStrictNotEqual(val) {
+    if (val !== 18) {
+    return "Not Equal";
+ }
+    return "Equal";
+}
+console.log(testStrictNotEqual(10));//here output is not equal
+
+
+//Comparison with logical and  operator
+
+function testGraterThan(val) {
+ if (val > 100) {
+     return "Over 100"
+ }
+ if (val > 10) {
+     return "Over 10"
+ }
+   
+     return "10 0r Under"
+ }
+ console.log(testGraterThan(10)); //Here output is  "10 0r Under"
+
+ 
+ //Comparison with greater than or equal to operator
+
+ function testGraterOrEqual(val) {
+ if (val >= 20) {
+     return "20 0r Over";
+ }
+ if (val >= 10) {
+     return "10 or Over";
+ }
+   
+     return "less than 10";
+ }
+ console.log(testGraterOrEqual(10));//Here output is "10 or Over"
+
+
+  //Comparison with less than operator
+
+  function testLessThan(val) {
+ if (val < 25) {
+     return "Under 25";
+ }
+ if (val < 55) {
+     return "under 55";
+ }
+   
+     return "return 55 or over";
+ }
+ console.log(testLessThan(10)); //Here output is "under 25"
+
+
+//Comparison with less than or equal to operator
+
+function testLessThanOrEqual(val) {
+ if (val <= 12) {
+     return "Smaller than or equal to 12";
+ }
+ if (val < 24) {
+     return "Smaller than or equal to 24";
+ }
+   
+     return "More than 24";
+ }
+ console.log(testLessThanOrEqual(10)); //Here output is "Smaller than or equal to 12"
 
 
 

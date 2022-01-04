@@ -623,6 +623,64 @@ function testLogicalOr(val) {
     }
  console.log(orderMyLogic(3)); //Output is "less than 5"
 
+//Chaining if else statement
+
+function testSize(num) {
+    if (num < 5 ){
+        return "Tiny";
+    }
+    else if (num < 10){
+        return "small"
+    }
+    else if (num < 15){
+        return "Medium"
+    }
+    else if (num < 20){
+        return "Large"
+    }
+    else {
+     return "Huge";
+    }
+    }
+ console.log(testSize(21)); //Output is "Huge"
+
+ // Golf code
+
+ var names = ["Hole-in-one!", "Eagle","Birdie","Par","Bogey","Double Bogey","Go Home"]
+ function golfScore(par,strokes) {
+
+    if (strokes == 1 ){
+        return names[0];
+    }
+    else if (strokes <= par -2 ) {
+        return names[1];
+    }
+    else if (strokes == par-1 ) { //(strokes 4 == par5-1) = (4==4)condition meet so output is "Birdie which is in 2 index of the element array"
+        
+        return names[2]
+    }
+    else if (strokes == par ) {
+        return names[3]
+    }
+    else if(strokes == par+1) { //(strokes 5 == par4+1) = (5==5)condition meet so output is "Bogey which is in 4 index of the element array"
+        return names[4]
+        
+     
+    }
+    else if(strokes == par+2) {
+        return names[5]
+ }
+ else if(strokes == par+3) { //(strokes 8 == par5+3) = (8==8)condition meet so output is "Bogey which is in 6th index of the element array"
+        
+        return names[6]
+ }
+
+ }
+ console.log(golfScore(5,4));//here out put is "Birdie"
+ console.log(golfScore(4,5));//here output is  "Bogey"
+ console.log(golfScore(5,8));//here output is  "Go home"
+
+
 
 
 

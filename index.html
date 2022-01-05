@@ -801,8 +801,265 @@ function testSize(num) {
    console.log(chainToSwitch(1))
    console.log(chainToSwitch("Srijana"))
 
+  
+   //Returning Boolean values from functions
+      
+    function isLess(a,b) {
+       
+      if (a < b) {
+           return true ;
+        }
+         else {
+           return false ;
+           }
+        }
+        console.log(isLless(10, 15));
+           
+        //or we can write in this way as well
 
+        function isLless(a,b) {
+       
+       
+            return a < b;
+         }
+        
+        console.log(isLless(10, 15));  
    
+    //Returning early pattern from functions
+
+    function abTest(a,b) {
+
+        if (a < 0 ||b < 0) {
+        return undefined
+        }
+        }
+    console.log(abTest(2, 2));
+
+    //counting cards
+    var count = 0;
+    function cc(card) {
+    
+     switch (card) {
+
+         case 2:
+         case 3:
+         case 4:
+         case 5:
+          case 6:
+             count++;
+             break;
+             
+         case 10:
+         case "J":
+         case "K":
+         case "A":
+         case 11:
+         case 12:
+             count--;
+             break;
+            }
+            var holdbet = "Hold"
+            if (count > 0) {
+                holdbet = "Bet"
+            }
+         
+            return count + " " + holdbet;
+
+ }
+ cc(2); cc("k"); cc(10); cc("k"); cc("A");
+ console.log(cc(4))
+
+ //Build javascript object
+
+ var OurDog = {
+     "name": "Tommy",
+     "legs": 4,
+     "tails": 1,
+     "friends": ["everything!"]
+
+ };
+
+ //Accessing object properties with dot notation
+ var myDog = {
+     "name": "Tommy",
+     "legs": 4,
+     "tails": 1,
+     "friends": ["everything!"]
+
+ };
+
+ var nameValue = myDog.name;
+ var legsValue = myDog.legs;
+
+ console.log(myDog.name);//output is "Tommy"
+ console.log(myDog.legs);//output is "4"
+
+  //Accessing object properties with Bracket notation
+
+  var testObj = {
+     "an entree": "hamburger",
+     "my side": "veggies",
+     "the drinks": "water",
+     };
+//in this tesObj we have properties eg(1) "an entree" with space, so it required bracket notation to get value
+     var entreeValue = testObj["an entree"];
+     var drinkValue = testObj["the drinks"];
+
+     console.log(testObj["an entree"]);//output is "hamburger"
+     console.log(testObj["the drinks"]);//output is "water"
+
+  //Accessing object properties with variables
+
+  var testObject = {
+     12: "Namath",
+     16: "Montana",
+     19:"Unitas"
+  };
+
+ var playerNumber = 16;
+ var player = testObject[playerNumber];
+ console.log(testObject[playerNumber]);//output is "Motana"
+
+ //Updating object properties
+
+ var myDog = {
+     "name": "Tommy",
+     "legs": 4,
+     "tails": 1,
+     "friends": ["everything!"]
+
+ };
+ myDog.name ="Happy krish"
+ console.log(myDog.name);
+
+ //Add new properties to new value
+ var myDog = {
+     "name": "Tommy",
+     "legs": 4,
+     "tails": 1,
+     "friends": ["everything!"]
+     
+ };
+ myDog.bark ="bow-wow"
+ console.log(myDog.bark);//here bark is properties added which value is "bow-wow"
+ 
+ 
+ //Delete properties from an object
+
+ var myDog = {
+     "name": "Tommy",
+     "legs": 4,
+     "tails": 1,
+     "friends": ["everything!"],
+     "bark" :["bow-wow"]
+ };
+  delete myDog.bark ;
+  delete myDog.tails;
+ console.log(myDog.bark);//Bark properties is deleted from object
+ console.log(myDog.tails);//tails properties is deleted from object
+
+ //Using object form lookups
+
+ function phoneticLookup(val) {
+     var result = " ";
+     var lookup = {
+         "alpha": "Adams",
+         "bravo": "boston"
+     }
+     results = lookup[val];
+     return results;
+ }
+    console.log(phoneticLookup("alpha"))//we can use this function instead of switch statement
+
+  //Testing object from properties
+ 
+  var myObj = {
+      gift : "Book",
+      pet  : "puppy",
+      cycle : "Hero"
+  };
+
+  function checkObj(checkPro) {
+      if (myObj.hasOwnProperty(checkPro)){
+      return myObj[checkPro];
+   } 
+   else {
+       return "Not found"
+   };
+
+  }
+    console.log(checkObj("gift"));//output is "book "which is the properties of "gift"
+    console.log(checkObj("Hello"));//output is "Not found "because properties named "hello" is not mentioned in myObj
+
+ //Manipulating complex objects
+
+ var myMusic = [{
+      "artist" : "Selena",
+      "title" : "Piano MAn",
+      "release_year" : "1993",
+      "formats":[
+          "CD",
+          "8T",
+          "Lp",
+        ],
+        "gold": true
+  },
+
+  { "artist" : "Beau carnes",
+      "title" : "Punk MAn",
+      "release_year" : "2009",
+      "formats":[
+          "youtube video",
+      ]
+ }
+
+];
+ console.log(myMusic);// It has two index in array[0,1] with sub array index[0[3],1[1]]
+
+//Accessing Nested object
+ var myStorage = {
+     "car":{
+         "inside":{
+             "glove box":"maps",
+             "passenger seat": "crumbs"
+         },
+         "outside": {
+             "trunk": "jack"
+
+         }
+     }
+ };
+
+ var gloveBoxContent = myStorage.car.inside["glove box"];
+ console.log(gloveBoxContent);//maps is the ouput
+
+ //Accessing nested arrays
+ 
+ var myFavmusic = [{
+      "Music" : "Slow",
+      "list":[
+          "CD",
+          "8T",
+          "Lp",
+        ],
+        
+  },
+
+  { "music" : "Fast",
+     "list":[
+          "youtube video",
+          "tiktok"
+      ]
+ }
+
+];
+ console.log(myFavmusic[1].list[1]);//tiktok is the second in music list and index[1] of arrays
+
+ 
+
+
+
+
 
 
 

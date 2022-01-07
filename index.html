@@ -1192,6 +1192,42 @@ console.log (i, myArray);//here (i) is 11 and array is [10] added to it
 
 //profile lookup
 
+var contacts = [
+      {
+         "firstName": "Srijana",
+         "lastname": "Poudel",
+         "numbers": "0789234",
+         "likes": [
+             "pizza",
+             "momo",
+             "tea"
+         ]
+
+     },
+      {
+         "firstName": "Aashis",
+         "lastName": "Rimal",
+         "Likes": [
+             "Sugar",
+             "Meat"
+      ]
+ }
+];
+ 
+
+ function lookUpProfile(name,prop) {
+     for (var i = 0; i < contacts.length; i++) {
+         if (contacts[i].firstName === name) {
+          return contacts[i][prop]|| "No such property"
+         }
+         
+     }
+     return "No such contact"
+    }
+
+   var data = lookUpProfile("Srijana", "numbers"); 
+
+     console.log(data);
 
 
 
